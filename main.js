@@ -20,3 +20,14 @@ canvas.addEventListener('mouseup', () => {
 canvas.addEventListener(mousemove, () => {
 
 });
+
+const colorPicker = document.getElementById('colorPicker'); 
+colorPicker.addEventListener('input', (mouse) => {
+    selectedColor = mouse.target.value;
+});
+
+
+const clearButton = document.getElementById('clearCanvas'); 
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
